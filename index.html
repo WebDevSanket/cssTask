@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Sanitizer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: #1A4341;
+    }
+
+    body {
+      height: 100%;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #bottle {
+      width: 100px;
+      height: 140px;
+      background: #F3AC3C;
+      margin: 0 auto;
+      position: relative;
+      top: 60%;
+      transform: translateY(-50%);
+      border-radius: 20px;
+    }
+
+    #bottle:before {
+      content: '';
+      width: 50%;
+      height: 80%;
+      background: #998235;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-bottom-right-radius: 20px;
+    }
+
+    #liquid-right {
+      width: 50px;
+      height: 80px;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #F3AC3C;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+
+    #liquid-left {
+      width: 50px;
+      height: 110px;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #998235;
+      border-bottom-left-radius: 20px;
+      border-top-right-radius: 30px;
+      border-top-left-radius: 30px;
+    }
+
+    #cap {
+      width: 50px;
+      height: 20px;
+      background: #F3AC3C;
+      margin: 0 auto;
+      position: absolute;
+      top: -19px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    #nozzle {
+      width: 20px;
+      height: 20px;
+      background: #F3AC3C;
+      margin: 0 auto;
+      position: absolute;
+      top: -38px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #handle {
+      width: 150px;
+      height: 20px;
+      background: #F3AC3C;
+      margin: 0 auto;
+      position: absolute;
+      top: -57px;
+      left: 75%;
+      transform: translateX(-50%);
+      border-radius: 30px;
+      border-bottom-right-radius: 0;
+    }
+
+    #handleNozzle {
+      width: 20px;
+      height: 20px;
+      background: #F3AC3C;
+      margin: 0 auto;
+      position: absolute;
+      top: -40px;
+      right: -60%;
+      transform: translateX(-50%);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      transition: all ease-in-out 300ms;
+    }
+
+    #handleNozzle:before,
+    #handleNozzle:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: #998235;
+      margin: 0 auto;
+      position: absolute;
+      right: -50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      top: 30px;
+    }
+
+    #handleNozzle:after {
+      top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="bottle">
+    <p id="cap">
+    <p id="nozzle">
+    <p id="handle">
+    <p id="handleNozzle">
+    </p>
+    <p id="liquid-right">
+    <p id="liquid-left">
+  </div>
+</body>
+
+</html>
